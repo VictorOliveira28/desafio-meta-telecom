@@ -1,4 +1,4 @@
-package entities;
+package com.victoroliveira.desafio_meta_telecom.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -67,8 +67,6 @@ public class Product {
 	}
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
-	}
-	
-	
+	}	
 
 }
