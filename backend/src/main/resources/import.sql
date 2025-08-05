@@ -1,0 +1,12 @@
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Notebook', 'Notebook super potente com processador i7, SSD rápido e bateria de longa duração', 1500.99, 3);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Cadeira Gamer', 'Cadeira ergonômica com apoio lombar e ajuste de altura', 1299.90, 12);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Teclado Mecânico RGB', 'Teclado com switches azuis e iluminação RGB personalizável', 349.90, 25);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Monitor 27'' 4K', 'Monitor UHD 4K com HDR10 e taxa de atualização de 60Hz', 1899.00, 10);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Mouse Sem Fio', 'Mouse óptico sem fio com bateria recarregável', 89.99, 40);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Hub USB-C 6 em 1', 'Adaptador multifuncional com HDMI, USB, SD e Ethernet', 229.50, 30);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Fone Bluetooth ANC', 'Fone com cancelamento de ruído ativo e autonomia de 20h', 599.00, 18);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Webcam Full HD', 'Câmera USB 1080p com microfone embutido e foco automático', 249.00, 22);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Cabo HDMI 2m', 'Cabo HDMI 2.0 de alta velocidade, ideal para 4K', 39.90, 100);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Suporte para Notebook', 'Base ajustável para notebook com ventilação', 119.00, 15);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Alto-falante Bluetooth', 'Caixa de som portátil com som estéreo e bateria de longa duração', 199.90, 20);
+INSERT INTO tb_products(name, description, price, quantity) VALUES ('Smartphone XYZ', 'Smartphone com tela AMOLED, 128GB e câmera tripla', 2599.00, 7);

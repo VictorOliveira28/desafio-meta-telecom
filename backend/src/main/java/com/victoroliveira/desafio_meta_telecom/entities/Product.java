@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "products")
+@Table(name = "tb_products")
 public class Product {
 	
 	@Id
@@ -22,8 +22,8 @@ public class Product {
 	
 	@Column(nullable = false)
 	private Double price;
-	@Column(nullable = false)
 	
+	@Column(nullable = false)	
 	private Integer quantity;
 		
 	public Product() {		
