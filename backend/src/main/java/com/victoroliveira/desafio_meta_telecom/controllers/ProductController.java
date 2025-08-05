@@ -33,7 +33,7 @@ public class ProductController {
 		return ResponseEntity.ok(list);		
 	}
 	
-	@PostMapping
+	@PostMapping("/insert")
 	public ResponseEntity<ProductDTO> insert( @RequestBody ProductDTO dto){
 		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
