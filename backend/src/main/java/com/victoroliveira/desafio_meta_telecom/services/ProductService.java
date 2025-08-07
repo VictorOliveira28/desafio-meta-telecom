@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.victoroliveira.desafio_meta_telecom.dto.ProductDTO;
-import com.victoroliveira.desafio_meta_telecom.dto.factory.ProductDTOFactory;
 import com.victoroliveira.desafio_meta_telecom.entities.Product;
 import com.victoroliveira.desafio_meta_telecom.exceptions.ResourceNotFoundException;
 import com.victoroliveira.desafio_meta_telecom.repositories.ProductRepository;
@@ -32,14 +31,7 @@ public class ProductService {
 				.stream()
 				.map(ProductDTO :: new)
 				.toList();
-	}
-	
-	@Transactional(readOnly = true)
-	public ProductDTO findById(Long id) {
-		Product product = repository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
-		return ProductDTOFactory.fromEntity(product);
-	}
+	}	
 	
 	@Transactional
 	public ProductDTO insert (ProductDTO dto) {

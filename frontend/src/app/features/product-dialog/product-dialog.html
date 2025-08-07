@@ -1,0 +1,77 @@
+<h1 mat-dialog-title>
+  {{ isEditMode ? "Editar Produto" : "Adicionar Novo Produto" }}
+</h1>
+
+<div mat-dialog-content [formGroup]="productForm">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Nome</mat-label>
+    <input
+      matInput
+      formControlName="name"
+      placeholder="Ex: Notebook"
+      required
+    />
+    <mat-error *ngIf="productForm.get('name')?.hasError('required')"
+      >Nome é obrigatório.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Descrição</mat-label>
+    <textarea
+      matInput
+      formControlName="description"
+      placeholder="Ex: Notebook Dell i7..."
+      required
+    ></textarea>
+    <mat-error *ngIf="productForm.get('description')?.hasError('required')"
+      >Descrição é obrigatória.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Preço</mat-label>
+    <input
+      matInput
+      type="number"
+      formControlName="price"
+      placeholder="Ex: 4500.50"
+      required
+    />
+    <mat-error *ngIf="productForm.get('price')?.hasError('required')"
+      >Preço é obrigatório.</mat-error
+    >
+    <mat-error *ngIf="productForm.get('price')?.hasError('min')"
+      >Preço não pode ser negativo.</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Quantidade</mat-label>
+    <input
+      matInput
+      type="number"
+      formControlName="quantity"
+      placeholder="Ex: 10"
+      required
+    />
+    <mat-error *ngIf="productForm.get('quantity')?.hasError('required')"
+      >Quantidade é obrigatória.</mat-error
+    >
+    <mat-error *ngIf="productForm.get('quantity')?.hasError('min')"
+      >Quantidade não pode ser negativa.</mat-error
+    >
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="productForm.invalid"
+    (click)="onSave()"
+  >
+    {{ isEditMode ? "Salvar Alterações" : "Adicionar" }}
+  </button>
+</div>
