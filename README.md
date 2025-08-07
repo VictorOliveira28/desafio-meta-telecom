@@ -128,6 +128,10 @@ O backend expõe os seguintes endpoints para o gerenciamento de produtos. A URL 
 
 *Nota: Os campos no body do request (`nome`, `preco`, `quantidade`) são exemplos e devem corresponder ao modelo de dados (`Product`) definido na sua aplicação Java.*
 
+# Após iniciar o backend, a documentação estará disponível em:
+
+## ➡️ http://localhost:8081/swagger-ui.html
+
 ## ✒️ Autor
 
 * **[Victor Oliveira]**
